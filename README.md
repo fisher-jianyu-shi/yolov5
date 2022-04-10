@@ -20,7 +20,7 @@ python3 -m pip install --upgrade pip
 `detect.py` (from original [YOLOv5 repo](https://github.com/ultralytics/yolov5)) runs inference on a variety of sources (images, videos, video streams, webcam, etc.) and saves results to `runs/detect`  
 For example, to detect people in an image using the pre-trained YOLOv5s model with a 40% confidence threshold, we simply have to run the following command in a terminal in the source directory:
 ```
-python detect.py --class 0 --weights Yolov5s.pt --conf-thres=0.4 --source example_pic.jpeg --view-img 
+python detect.py --class 0 --weights yolov5s.pt --conf-thres=0.4 --source example_pic.jpeg --view-img 
 ```
 
 This will automatically save the results in the directory `runs/detect/exp` as an annotated image with a label and the confidence levels of the prediction. 
@@ -32,5 +32,5 @@ python detect_pcap.py --class 0 --weights best.pt --conf-thres=0.4 --source Oust
 ```
 To calculate the relative distance between two people:
 ```
-python detect_PCAP.py --class 0 --weights best.pt --conf-thres=0.4 --source Ouster-YOLOv5-sample.pcap --metadata-path Ouster-YOLOv5-sample.json  --view-img --social-distance
+python detect_pcap.py --class 0 --weights best.pt --conf-thres=0.4 --source Ouster-YOLOv5-sample.pcap --metadata-path Ouster-YOLOv5-sample.json  --view-img --social-distance
 ```
